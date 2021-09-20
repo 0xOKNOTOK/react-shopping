@@ -1,0 +1,22 @@
+
+$colorWhite: #EEE9E7;
+$colorOrange: #CC3F0C;
+$colorGolden: #9A6D38;
+$colorGreen: #33673B;
+$colorJungle: #19231A;
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #app>div {
+    height: 100%;
+}
+
+.site {
+    height: 100%;
+    background-color: $colorWhite;
+}
