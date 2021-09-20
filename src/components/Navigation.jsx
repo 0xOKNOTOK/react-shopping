@@ -6,16 +6,24 @@ const Navigation = () => (
   <nav>
     <ul>
       <li>
-        <Link to='/'>Home</Link>
+        <Link className='nav_anchor' to='/'>
+          Home
+        </Link>
       </li>
       <li>
-        <Link to='/products'>Products</Link>
+        <Link className='nav_anchor' to='/products'>
+          Products
+        </Link>
       </li>
       <li>
-        <Link to='/about'>About</Link>
+        <Link className='nav_anchor' to='/about'>
+          About
+        </Link>
       </li>
       <li>
-        <Link to='/cart'>CART_ICON</Link>
+        <Link className='nav_anchor' to='/cart'>
+          CART_ICON
+        </Link>
       </li>
     </ul>
   </nav>

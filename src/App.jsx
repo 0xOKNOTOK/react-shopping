@@ -11,7 +11,6 @@ function App () {
   return (
     <div className='site'>
       <BrowserRouter>
-        <Navigation />
         <Switch>
           <Route path='/products'>
             <Products />
