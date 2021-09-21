@@ -12,6 +12,10 @@ $fontPrimary: 'Roboto Mono', monospace;
     font-family: $fontPrimary;
 }
 
+p {
+    padding: 0;
+}
+
 html, #app>div {
     height: 100%;
 }

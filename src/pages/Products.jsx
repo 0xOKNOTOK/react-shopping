@@ -3,9 +3,11 @@ import Navigation from '../components/Navigation'
 
 const Products = () => {
   return (
-    <div className='products_page'>
+    <div>
       <Navigation />
-      <h1>Products</h1>
+      <div className='products_page'>
+        <h1>Products</h1>
+      </div>
     </div>
   )
 }
