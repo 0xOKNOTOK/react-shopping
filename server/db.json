@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Cherry MX Reds",
+    "type": "keycaps",
+    "description": "Classic Cherry linear switches, used by gamers.",
+    "filename": "cherymxred.jpg",
+    "price": 28.1,
+    "rating": 5
+  }, {
+    "title": "Gold Stabilisers",
+    "type": "stabilisers",
+    "description": "High quality gold stabilisers, unlubed.",
+    "filename": "1.jpg",
+    "price": 12.5,
+    "rating": 4
+  }, {
+    "title": "GMMK Pro",
+    "type": "board",
+    "description":
+      "Glorious GMMK Pro, a popular barebones keyboard for first time or experienced builders.",
+    "filename": "2.jpg",
+    "price": 100.2,
+    "rating": 4
+  }
+  , {
+    "title": "Cherry MX Blues",
+    "type": "keycaps",
+    "description":
+      "Classic tactile clicky switches, manufactered and tested to last.",
+    "filename": "2.jpg",
+    "price": 100.2,
+    "rating": 5
+  }
+  , {
+    "title": "Stinky Stabs",
+    "type": "stabilisers",
+    "description":
+      "Stinky stabilisers are a new brand produced out of North America, they are a prototype!",
+    "filename": "2.jpg",
+    "price": 100.2,
+    "rating": 3
+  }
+  
+]
