@@ -1,0 +1,29 @@
+@import './theme/colors.scss';
+@import './theme/global.scss';
+
+
+
+
+.products_wrapper {
+    justify-content: center;
+    margin-top: 4%;
+    width: 100%;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+}
+
+
+.product_card {
+    background-color: $colorWhite;
+    padding: 20px;
+    border: 1px solid $colorOrange;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}

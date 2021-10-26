@@ -4,7 +4,7 @@ const ButtonRoute = withRouter(({ history, ...props }) => (
   <button
     type='button'
     onClick={() => {
-      history.push('/products')
+      history.push(props.buttonRoute)
     }}
   >
     {props.buttonLabel}

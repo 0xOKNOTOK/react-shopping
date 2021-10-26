@@ -21,7 +21,10 @@ const Homepage = () => {
                 to UK enthusiats.
               </p>
             </div>
-            <ButtonRoute buttonLabel={'View Products'} />
+            <ButtonRoute
+              buttonRoute={'/products'}
+              buttonLabel={'View Products'}
+            />
             <button>Get Notified</button>
           </div>
         </div>
