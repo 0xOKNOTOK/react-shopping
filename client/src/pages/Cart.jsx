@@ -12,10 +12,14 @@ const Cart = ({ clearCartOfItems, cartContents }) => {
     })
   }
 
+  const resetCartValue = () => {
+    setValue(0)
+  }
+
   useEffect(() => {
     getPrice()
-  }, [])
-  console.log(cartContents)
+  }, [cartContents])
+
   return (
     <div>
       <Navigation />
@@ -32,7 +36,13 @@ const Cart = ({ clearCartOfItems, cartContents }) => {
           ))}
         </ul>
         <h1>YOUR TOTAL IS {value}</h1>
-        <Button handleClick={clearCartOfItems} buttonLabel={'EMPTY CART'} />
+        <Button
+          handleClick={() => {
+            resetCartValue()
+            clearCartOfItems()
+          }}
+          buttonLabel={'EMPTY CART'}
+        />
       </div>
     </div>
   )
