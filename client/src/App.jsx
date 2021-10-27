@@ -38,7 +38,7 @@ function App () {
             <About />
           </Route>
           <Route path='/cart'>
-            <Cart clearCartOfItems={clearCartOfItems} />
+            <Cart clearCartOfItems={clearCartOfItems} cartContents={cart} />
           </Route>
           <Route path='/'>
             <Homepage />

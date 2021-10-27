@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../styles/products.scss'
 import Navigation from '../components/Navigation'
-import Card from './Card'
+import Card from '../components/Card'
 import Footer from '../components/Footer'
 
 const Products = props => {
