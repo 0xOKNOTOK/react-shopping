@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Card from './Card'
 import Footer from '../components/Footer'
 
-const Products = () => {
+const Products = props => {
   const [products, setProducts] = useState([])
   const API_ADDRESS = 'http://localhost:3001/api/products'
   useEffect(() => {
@@ -24,15 +24,15 @@ const Products = () => {
           <h1>Products</h1>
           <section className='products_wrapper'>
             {products.map((product, index) => (
-              <div key={index}>
-                <Card
-                  className='card'
-                  productName={product.title}
-                  productDescription={product.description}
-                  productImage={product.filename}
-                  productPrice={product.price}
-                />
-              </div>
+              <Card
+                className='card'
+                key={index}
+                addItemToCart={props.addItemToCart}
+                productName={product.title}
+                productDescription={product.description}
+                productImage={product.filename}
+                productPrice={product.price}
+              />
             ))}
           </section>
         </div>
