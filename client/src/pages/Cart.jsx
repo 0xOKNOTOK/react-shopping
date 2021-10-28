@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navigation from '../components/Navigation'
 import Button from '../components/Button'
+import '../styles/cart.scss'
 
 const Cart = ({ clearCartOfItems, cartContents }) => {
   const [value, setValue] = useState(0)
@@ -23,19 +24,22 @@ const Cart = ({ clearCartOfItems, cartContents }) => {
   return (
     <div>
       <Navigation />
-      <div className='cart_page'>
+      <main className='cart_page'>
         <h1>Cart</h1>
         <p>Your current items: </p>
         <ul>
           {cartContents.map(item => (
-            <li>
-              <h5>{item.name}</h5>
-              <p>{item.info}</p>
-              <span>{`$${item.price}`}</span>
-            </li>
+            <div className='cart_item'>
+              <li>
+                <h5>{item.name}</h5>
+                <p>{item.info}</p>
+                <span>{`$${item.price}`}</span>
+              </li>
+            </div>
           ))}
         </ul>
-        <h1>YOUR TOTAL IS {value}</h1>
+        <h1>Your item total is ${value}.</h1>
+        <Button buttonLabel={'CHECKOUT'} />
         <Button
           handleClick={() => {
             resetCartValue()
@@ -43,7 +47,7 @@ const Cart = ({ clearCartOfItems, cartContents }) => {
           }}
           buttonLabel={'EMPTY CART'}
         />
-      </div>
+      </main>
     </div>
   )
 }
