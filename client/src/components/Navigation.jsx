@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/navigation.scss'
+import { FaShoppingCart } from 'react-icons/fa'
 
 const Navigation = () => (
   <nav>
@@ -22,7 +23,7 @@ const Navigation = () => (
       </li>
       <li>
         <Link className='nav_anchor' to='/cart'>
-          CART_ICON
+          <FaShoppingCart />
         </Link>
       </li>
     </ul>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.scss'
 import About from './pages/About'
@@ -7,7 +7,9 @@ import Products from './pages/Products'
 import Cart from './pages/Cart'
 
 function App () {
-  const [cart, setCart] = useState([])
+  const cartLocalStorage =
+    JSON.parse(localStorage.getItem('cartContents')) || []
+  const [cart, setCart] = useState(cartLocalStorage)
 
   const addItemToCart = (
     productName,

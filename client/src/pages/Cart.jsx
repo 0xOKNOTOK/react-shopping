@@ -18,6 +18,8 @@ const Cart = ({ clearCartOfItems, cartContents }) => {
   }
 
   useEffect(() => {
+    console.log(typeof cartContents, cartContents)
+    localStorage.setItem('cartContents', JSON.stringify(cartContents))
     getPrice()
   }, [cartContents])
 

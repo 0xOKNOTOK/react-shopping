@@ -4,14 +4,14 @@
     "type": "keycaps",
     "description": "Classic Cherry linear switches, used by gamers.",
     "filename": "cherymxred.jpg",
-    "price": 28.1,
+    "price": 28,
     "rating": 5
   }, {
     "title": "Gold Stabilisers",
     "type": "stabilisers",
     "description": "High quality gold stabilisers, unlubed.",
     "filename": "1.jpg",
-    "price": 12.5,
+    "price": 12,
     "rating": 4
   }, {
     "title": "GMMK Pro",
@@ -19,7 +19,7 @@
     "description":
       "Glorious GMMK Pro, a popular barebones keyboard for first time or experienced builders.",
     "filename": "2.jpg",
-    "price": 100.2,
+    "price": 100,
     "rating": 4
   }
   , {
@@ -28,7 +28,7 @@
     "description":
       "Classic tactile clicky switches, manufactered and tested to last.",
     "filename": "2.jpg",
-    "price": 100.2,
+    "price": 100,
     "rating": 5
   }
   , {
@@ -37,7 +37,7 @@
     "description":
       "Stinky stabilisers are a new brand produced out of North America, they are a prototype!",
     "filename": "2.jpg",
-    "price": 100.2,
+    "price": 100,
     "rating": 3
   }
   
