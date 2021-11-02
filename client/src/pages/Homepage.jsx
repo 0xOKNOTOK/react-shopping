@@ -4,10 +4,10 @@ import Keycap from '../images/keycap.jpg'
 import Navigation from '../components/Navigation'
 import ButtonRoute from '../components/ButtonRoute'
 
-const Homepage = () => {
+const Homepage = ({ cartCounter }) => {
   return (
     <div>
-      <Navigation />
+      <Navigation cartCounter={cartCounter} />
       <div
         style={{ background: `url(${Keycap}) no-repeat center center fixed` }}
         className='home_page'

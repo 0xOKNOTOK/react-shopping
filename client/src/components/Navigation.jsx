@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/navigation.scss'
-import { FaShoppingCart } from 'react-icons/fa'
+import CartNotification from './CartNotification'
 
-const Navigation = () => (
+const Navigation = ({ cartCounter }) => (
   <nav>
     <ul>
       <li>
@@ -23,7 +23,7 @@ const Navigation = () => (
       </li>
       <li>
         <Link className='nav_anchor' to='/cart'>
-          <FaShoppingCart />
+          <CartNotification cartCounter={cartCounter} />
         </Link>
       </li>
     </ul>

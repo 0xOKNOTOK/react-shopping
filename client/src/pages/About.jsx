@@ -1,10 +1,10 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 
-const About = () => {
+const About = ({ cartCounter }) => {
   return (
     <div>
-      <Navigation />
+      <Navigation cartCounter={cartCounter} />
       <div className='about_page'>
         <h1>About us.</h1>
         <p>

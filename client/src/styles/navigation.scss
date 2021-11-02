@@ -7,6 +7,7 @@
 @media all and (min-width: 1140px) {
     .nav_anchor {
         font-size: 16px;
+        padding: 10px;
     }
 
     li {
@@ -68,4 +69,9 @@ li {
     text-transform: uppercase;
     font-weight: bolder;
     color: $colorWhite;
+}
+
+
+.card-counter {
+    display: inline;
 }

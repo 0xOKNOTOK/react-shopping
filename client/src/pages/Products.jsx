@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Card from '../components/Card'
 import Footer from '../components/Footer'
 
-const Products = props => {
+const Products = ({ addItemToCart, cartCounter }) => {
   const [products, setProducts] = useState([])
   const API_ADDRESS = 'http://localhost:3001/api/products'
   useEffect(() => {
@@ -16,7 +16,7 @@ const Products = props => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation cartCounter={cartCounter} />
       <div className='products_page'></div>
 
       <main>
@@ -27,7 +27,7 @@ const Products = props => {
               <Card
                 className='card'
                 key={index}
-                addItemToCart={props.addItemToCart}
+                addItemToCart={addItemToCart}
                 productName={product.title}
                 productDescription={product.description}
                 productImage={product.filename}

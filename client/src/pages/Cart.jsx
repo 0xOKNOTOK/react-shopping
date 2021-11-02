@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation'
 import Button from '../components/Button'
 import '../styles/cart.scss'
 
-const Cart = ({ clearCartOfItems, cartContents }) => {
+const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
   const [value, setValue] = useState(0)
 
   const getPrice = () => {
@@ -25,7 +25,7 @@ const Cart = ({ clearCartOfItems, cartContents }) => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation cartCounter={cartCounter} />
       <main className='cart_page'>
         <h1>Cart</h1>
         <p>Your current items: </p>

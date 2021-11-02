@@ -10,6 +10,7 @@ function App () {
   const cartLocalStorage =
     JSON.parse(localStorage.getItem('cartContents')) || []
   const [cart, setCart] = useState(cartLocalStorage)
+  const [cartCounter, setCartCounter] = useState(0)
 
   const addItemToCart = (
     productName,
@@ -23,6 +24,7 @@ function App () {
       info: productDescription
     }
     setCart(cart => [...cart, item])
+    setCartCounter(cartCounter + 1)
   }
 
   const clearCartOfItems = () => {
@@ -34,16 +36,20 @@ function App () {
       <BrowserRouter>
         <Switch>
           <Route path='/products'>
-            <Products addItemToCart={addItemToCart} />
+            <Products addItemToCart={addItemToCart} cartCounter={cartCounter} />
           </Route>
           <Route path='/about'>
-            <About />
+            <About cartCounter={cartCounter} />
           </Route>
           <Route path='/cart'>
-            <Cart clearCartOfItems={clearCartOfItems} cartContents={cart} />
+            <Cart
+              clearCartOfItems={clearCartOfItems}
+              cartContents={cart}
+              cartCounter={cartCounter}
+            />
           </Route>
           <Route path='/'>
-            <Homepage />
+            <Homepage cartCounter={cartCounter} />
           </Route>
         </Switch>
       </BrowserRouter>
