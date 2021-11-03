@@ -15,7 +15,7 @@ const Card = ({
 
   return (
     <div className='product_card'>
-      <img src={`/images/${productImage}`} alt=''></img>
+      <img src={`assets/${productImage}`} alt=''></img>
       <h3>{productName}</h3>
       <p>{productDescription}</p>
       <h4>{`$${productPrice}`}</h4>

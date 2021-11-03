@@ -40,12 +40,12 @@ button {
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 
 button:hover {
     background-color: $colorOrange;
     color: $colorWhite;
-    border: 2px solid $colorOrange;
     transition: 300ms;
 }

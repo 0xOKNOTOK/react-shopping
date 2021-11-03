@@ -10,7 +10,7 @@ function App () {
   const cartLocalStorage =
     JSON.parse(localStorage.getItem('cartContents')) || []
   const [cart, setCart] = useState(cartLocalStorage)
-  const [cartCounter, setCartCounter] = useState(0)
+  const [cartCounter, setCartCounter] = useState(cartLocalStorage.length)
 
   const addItemToCart = (
     productName,
@@ -29,6 +29,7 @@ function App () {
 
   const clearCartOfItems = () => {
     setCart([])
+    setCartCounter(0)
   }
 
   return (

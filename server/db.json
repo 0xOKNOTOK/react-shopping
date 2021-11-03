@@ -3,14 +3,14 @@
     "title": "Cherry MX Reds",
     "type": "keycaps",
     "description": "Classic Cherry linear switches, used by gamers.",
-    "filename": "cherymxred.jpg",
+    "filename": "product_cherry_mx_reds.jpg",
     "price": 28,
     "rating": 5
   }, {
     "title": "Gold Stabilisers",
     "type": "stabilisers",
     "description": "High quality gold stabilisers, unlubed.",
-    "filename": "1.jpg",
+    "filename": "product_gold_stabs.jpg",
     "price": 12,
     "rating": 4
   }, {
@@ -18,7 +18,7 @@
     "type": "board",
     "description":
       "Glorious GMMK Pro, a popular barebones keyboard for first time or experienced builders.",
-    "filename": "2.jpg",
+    "filename": "product_gmmk_pro.jpg",
     "price": 100,
     "rating": 4
   }
