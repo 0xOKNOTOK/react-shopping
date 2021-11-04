@@ -15,7 +15,7 @@ npm install
 ## Usage
 
 ```bash
-nodemon server/server.js & cd ./client && npm run start (for development purposes).
+nodemon server/server.js && cd.. &  cd ./client && npm run start (for development purposes).
 ```
 
 ## Contributing
