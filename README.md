@@ -16,7 +16,7 @@ OR
 
 yarn install
 cd ./client
-yarn install.
+yarn install
 ```
 
 ## Usage
