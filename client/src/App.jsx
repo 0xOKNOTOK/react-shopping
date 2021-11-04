@@ -17,6 +17,7 @@ function App () {
     productPrice,
     productDescription,
     productImage,
+    productId,
     index
   ) => {
     // check if item already exists in cart [if so duplicate.]
@@ -25,15 +26,9 @@ function App () {
       price: productPrice,
       info: productDescription,
       image: productImage,
+      id: productId,
       amount: 1
     }
-    let newArr = [...cart]
-
-    cart.map(product =>
-      product.name === productName
-        ? setCart([...cart], newArr[item.amount + 1])
-        : item
-    )
     setCart(cart => [...cart, item])
 
     setCartCounter(cartCounter + 1)

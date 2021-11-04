@@ -6,11 +6,18 @@ const Card = ({
   productPrice,
   productDescription,
   productImage,
-  addItemToCart
+  addItemToCart,
+  productId
 }) => {
   const handleAddCartButton = e => {
     e.preventDefault()
-    addItemToCart(productName, productPrice, productDescription, productImage)
+    addItemToCart(
+      productName,
+      productPrice,
+      productDescription,
+      productImage,
+      productId
+    )
   }
 
   return (
