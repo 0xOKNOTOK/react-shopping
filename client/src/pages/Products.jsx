@@ -17,25 +17,23 @@ const Products = ({ addItemToCart, cartCounter }) => {
   return (
     <div>
       <Navigation cartCounter={cartCounter} />
-      <div className='products_page'></div>
-
       <main>
         <div className='page-header'>
           <h1>Products</h1>
-          <section className='products_wrapper'>
-            {products.map((product, index) => (
-              <Card
-                className='card'
-                key={index}
-                addItemToCart={addItemToCart}
-                productName={product.title}
-                productDescription={product.description}
-                productImage={product.filename}
-                productPrice={product.price}
-              />
-            ))}
-          </section>
         </div>
+        <section className='products_wrapper'>
+          {products.map((product, index) => (
+            <Card
+              className='card'
+              key={index}
+              addItemToCart={addItemToCart}
+              productName={product.title}
+              productDescription={product.description}
+              productImage={product.filename}
+              productPrice={product.price}
+            />
+          ))}
+        </section>
       </main>
       <Footer />
     </div>

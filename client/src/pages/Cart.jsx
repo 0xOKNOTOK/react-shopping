@@ -19,7 +19,6 @@ const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
 
   useEffect(() => {
     localStorage.setItem('cartContents', JSON.stringify(cartContents))
-
     getPrice()
   }, [cartContents])
 
@@ -27,8 +26,10 @@ const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
     <div>
       <Navigation cartCounter={cartCounter} />
       <main className='cart_page'>
-        <h1>Cart</h1>
-        <p>Your current items: </p>
+        <div className='page-header'>
+          <h1>Cart</h1>
+          <p>Your current items: </p>
+        </div>
         <ul className='products_wrapper'>
           {cartContents.map(item => (
             <div className='product_card'>

@@ -2,7 +2,13 @@
 @import './theme/global.scss';
 
 
+.page-header {
+    margin-left: 120px;
+}
 
+.page-header p {
+    margin-left: -0px;
+}
 
 .products_wrapper {
     justify-content: center;
