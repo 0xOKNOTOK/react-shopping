@@ -1,5 +1,6 @@
 [
   {
+    "id": "2321",
     "title": "Cherry MX Reds",
     "type": "keycaps",
     "description": "Classic Cherry linear switches, used by gamers.",
@@ -7,6 +8,7 @@
     "price": 28,
     "rating": 5
   }, {
+    "id": "8954",
     "title": "Gold Stabilisers",
     "type": "stabilisers",
     "description": "High quality gold stabilisers, unlubed.",
@@ -14,6 +16,7 @@
     "price": 12,
     "rating": 4
   }, {
+    "id": "3567",
     "title": "GMMK Pro",
     "type": "board",
     "description":
@@ -23,6 +26,7 @@
     "rating": 4
   }
   , {
+    "id": "2464",
     "title": "Cherry MX Blues",
     "type": "keycaps",
     "description":
@@ -32,6 +36,7 @@
     "rating": 5
   }
   , {
+    "id": "8234",
     "title": "Stinky Stabs",
     "type": "stabilisers",
     "description":

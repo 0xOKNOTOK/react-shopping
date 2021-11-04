@@ -19,14 +19,25 @@ function App () {
     productImage,
     index
   ) => {
+    // check if item already exists in cart [if so duplicate.]
     const item = {
       name: productName,
       price: productPrice,
       info: productDescription,
-      image: productImage
+      image: productImage,
+      amount: 1
     }
+    let newArr = [...cart]
+
+    cart.map(product =>
+      product.name === productName
+        ? setCart([...cart], newArr[item.amount + 1])
+        : item
+    )
     setCart(cart => [...cart, item])
+
     setCartCounter(cartCounter + 1)
+    console.log(cart)
   }
 
   const clearCartOfItems = () => {
