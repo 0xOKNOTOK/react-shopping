@@ -16,12 +16,14 @@ function App () {
     productName,
     productPrice,
     productDescription,
+    productImage,
     index
   ) => {
     const item = {
       name: productName,
       price: productPrice,
-      info: productDescription
+      info: productDescription,
+      image: productImage
     }
     setCart(cart => [...cart, item])
     setCartCounter(cartCounter + 1)

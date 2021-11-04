@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navigation from '../components/Navigation'
 import Button from '../components/Button'
 import '../styles/cart.scss'
+import '../styles/products.scss'
 
 const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
   const [value, setValue] = useState(0)
@@ -9,7 +10,6 @@ const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
   const getPrice = () => {
     cartContents.forEach(item => {
       setValue(previousValue => previousValue + item.price)
-      console.log(typeof item.price)
     })
   }
 
@@ -18,8 +18,8 @@ const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
   }
 
   useEffect(() => {
-    console.log(typeof cartContents, cartContents)
     localStorage.setItem('cartContents', JSON.stringify(cartContents))
+
     getPrice()
   }, [cartContents])
 
@@ -29,14 +29,13 @@ const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
       <main className='cart_page'>
         <h1>Cart</h1>
         <p>Your current items: </p>
-        <ul>
+        <ul className='products_wrapper'>
           {cartContents.map(item => (
-            <div className='cart_item'>
-              <li>
-                <h5>{item.name}</h5>
-                <p>{item.info}</p>
-                <span>{`$${item.price}`}</span>
-              </li>
+            <div className='product_card'>
+              <img src={`assets/${item.image}`} alt=''></img>
+              <h3>{item.name}</h3>
+              <p>{item.info}</p>
+              <h4>{`$${item.price}`}</h4>
             </div>
           ))}
         </ul>

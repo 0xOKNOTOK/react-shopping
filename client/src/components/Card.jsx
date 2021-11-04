@@ -10,7 +10,7 @@ const Card = ({
 }) => {
   const handleAddCartButton = e => {
     e.preventDefault()
-    addItemToCart(productName, productPrice, productDescription)
+    addItemToCart(productName, productPrice, productDescription, productImage)
   }
 
   return (
