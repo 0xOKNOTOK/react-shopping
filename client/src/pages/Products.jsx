@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 
 const Products = ({ addItemToCart, cartCounter }) => {
   const [products, setProducts] = useState([])
+  const [filter, setFilter] = useState(['All'])
   const API_ADDRESS = 'http://localhost:3001/api/products'
   useEffect(() => {
     axios.get(API_ADDRESS).then(response => {
@@ -14,12 +15,26 @@ const Products = ({ addItemToCart, cartCounter }) => {
     })
   }, [])
 
+  const productFilter = products => {}
+
   return (
     <div>
       <Navigation cartCounter={cartCounter} />
       <main>
         <div className='page-header'>
           <h1>Products</h1>
+          <select
+            onChange={productFilter}
+            className='product_filter'
+            aria-label='filter-by-type'
+          >
+            <option value='All'>Filter by Type</option>
+            <option value='Keycaps'>Keycaps</option>
+            <option value='Deskpads'>Deskpads</option>
+            <option value='Keyboards'>Keyboards</option>
+            <option value='Stabilisers'>Stabilisers</option>
+            <span className='focus'></span>
+          </select>
         </div>
         <section className='products_wrapper'>
           {products.map((product, index) => (
