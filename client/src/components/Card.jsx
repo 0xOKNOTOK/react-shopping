@@ -7,7 +7,8 @@ const Card = ({
   productDescription,
   productImage,
   addItemToCart,
-  productId
+  productId,
+  productRating
 }) => {
   const handleAddCartButton = e => {
     e.preventDefault()
@@ -26,6 +27,7 @@ const Card = ({
       <h3>{productName}</h3>
       <p>{productDescription}</p>
       <h4>{`$${productPrice}`}</h4>
+      {productRating}
       <Button handleClick={handleAddCartButton} buttonLabel={'Add To Cart'} />
     </div>
   )

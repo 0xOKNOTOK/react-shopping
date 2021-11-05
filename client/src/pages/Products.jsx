@@ -47,6 +47,7 @@ const Products = ({ addItemToCart, cartCounter }) => {
               productImage={product.filename}
               productPrice={product.price}
               productId={product.id}
+              productRating={product.rating}
             />
           ))}
         </section>
