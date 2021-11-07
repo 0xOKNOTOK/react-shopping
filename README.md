@@ -1,7 +1,7 @@
 # Vanilla React E-Commerce Site
 
 Simple react based website with temporary Node.js API for serving product data. View JSON in server files for the layout of the data.
-Built using React + Express.js, includes several dependecies including nodemon, cors etc...
+Built using React + Express.js, includes several dev dependecies including nodemon, cors etc...
 
 ## Installation
 
