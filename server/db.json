@@ -32,18 +32,58 @@
     "description":
       "Classic tactile clicky switches, manufactered and tested to last.",
     "filename": "product_cherry_mx_blues.jpg",
-    "price": 100,
+    "price": 20,
     "rating": 5
   }
   , {
     "id": "8234",
-    "title": "Stinky Stabs",
-    "type": "stabilisers",
+    "title": "Cyberpnk Pink Deskmat",
+    "type": "deskpads",
     "description":
-      "Stinky stabilisers are a new brand produced out of North America, they are a prototype!",
-    "filename": "product_stinky_stabs.jpg",
-    "price": 100,
-    "rating": 3
+      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "filename": "product_cyberpnk_pink.jpg",
+    "price": 30,
+    "rating": 5
+  }
+  , {
+    "id": "8234",
+    "title": "Cyberpnk Black Deskmat",
+    "type": "deskpads",
+    "description":
+      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "filename": "product_cyberpnk_black.jpg",
+    "price": 30,
+    "rating": 5
+  }
+  , {
+    "id": "8234",
+    "title": "Cyberpnk Yellow Deskmat",
+    "type": "deskpads",
+    "description":
+      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "filename": "product_cyberpnk_yellow.jpg",
+    "price": 30,
+    "rating": 5
+  }
+  , {
+    "id": "8234",
+    "title": "Cyberpnk Red Deskmat",
+    "type": "deskpads",
+    "description":
+      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "filename": "product_cyberpnk_red.jpg",
+    "price": 30,
+    "rating": 5
+  }
+  , {
+    "id": "8234",
+    "title": "Cyberpnk Blue Deskmat",
+    "type": "deskpads",
+    "description":
+      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "filename": "product_cyberpnk_blue.jpg",
+    "price": 30,
+    "rating": 5
   }
   
 ]

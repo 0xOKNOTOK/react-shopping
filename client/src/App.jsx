@@ -29,10 +29,9 @@ function App () {
       id: productId,
       amount: 1
     }
-    setCart(cart => [...cart, item])
 
+    setCart([...cart, item])
     setCartCounter(cartCounter + 1)
-    console.log(cart)
   }
 
   const clearCartOfItems = () => {
