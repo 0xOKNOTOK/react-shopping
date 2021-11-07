@@ -3,7 +3,6 @@ import axios from 'axios'
 import '../styles/products.scss'
 import Navigation from '../components/Navigation'
 import Card from '../components/Card'
-import Footer from '../components/Footer'
 
 const Products = ({ addItemToCart, cartCounter }) => {
   const [products, setProducts] = useState([])
@@ -15,7 +14,25 @@ const Products = ({ addItemToCart, cartCounter }) => {
     })
   }, [])
 
-  const productFilter = products => {}
+  useEffect(() => {
+    const e = {
+      target: {
+        value: 'all'
+      }
+    }
+    productFilter(e)
+  }, [])
+
+  const productFilter = e => {
+    const newFilterTag = e.target.value.toLowerCase()
+    console.log(newFilterTag)
+    if (newFilterTag === 'all') {
+      console.log('stink')
+      setFilter(null)
+    } else {
+      setFilter(newFilterTag)
+    }
+  }
 
   return (
     <div>
@@ -37,22 +54,38 @@ const Products = ({ addItemToCart, cartCounter }) => {
           </select>
         </div>
         <section className='products_wrapper'>
-          {products.map((product, index) => (
-            <Card
-              className='card'
-              key={index}
-              addItemToCart={addItemToCart}
-              productName={product.title}
-              productDescription={product.description}
-              productImage={product.filename}
-              productPrice={product.price}
-              productId={product.id}
-              productRating={product.rating}
-            />
-          ))}
+          {filter
+            ? products
+                .filter(product => product.type === filter)
+                .map((product, index) => (
+                  <Card
+                    className='card'
+                    key={index}
+                    addItemToCart={addItemToCart}
+                    productName={product.title}
+                    productDescription={product.description}
+                    productImage={product.filename}
+                    productPrice={product.price}
+                    productId={product.id}
+                    productRating={product.rating}
+                  />
+                ))
+            : products.map((product, index) => (
+                <Card
+                  className='card'
+                  key={index}
+                  addItemToCart={addItemToCart}
+                  productName={product.title}
+                  productDescription={product.description}
+                  productImage={product.filename}
+                  productPrice={product.price}
+                  productId={product.id}
+                  productRating={product.rating}
+                />
+              ))}
+          {}
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

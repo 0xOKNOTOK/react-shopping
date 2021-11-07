@@ -5,6 +5,7 @@ import About from './pages/About'
 import Homepage from './pages/Homepage'
 import Products from './pages/Products'
 import Cart from './pages/Cart'
+import Footer from './components/Footer'
 
 function App () {
   const cartLocalStorage =
@@ -61,6 +62,7 @@ function App () {
             <Homepage cartCounter={cartCounter} />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   )
