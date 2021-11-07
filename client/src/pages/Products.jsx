@@ -28,7 +28,7 @@ const Products = ({ addItemToCart, cartCounter }) => {
     console.log(newFilterTag)
     if (newFilterTag === 'all') {
       console.log('stink')
-      setFilter(null)
+      setFilter()
     } else {
       setFilter(newFilterTag)
     }
@@ -40,12 +40,13 @@ const Products = ({ addItemToCart, cartCounter }) => {
       <main>
         <div className='page-header'>
           <h1>Products</h1>
+          <p>Filter: </p>
           <select
             onChange={productFilter}
             className='product_filter'
             aria-label='filter-by-type'
           >
-            <option value='All'>Filter by Type</option>
+            <option value='All'>All</option>
             <option value='Keycaps'>Keycaps</option>
             <option value='Deskpads'>Deskpads</option>
             <option value='Keyboards'>Keyboards</option>
