@@ -29,12 +29,16 @@ function App () {
       id: productId,
       amount: 1
     }
-    checkExistingItem(productName)
-    setCart([...cart, item])
-    setCartCounter(cartCounter + 1)
-  }
 
-  const checkExistingItem = productName => {}
+    const foundItem = cart.find(product => product.id === productId)
+    const alteredFound = { ...foundItem, amount: foundItem.amount + 1 }
+
+    setCart(
+      cart.map(product => (product.id !== productId ? item : alteredFound))
+    )
+    setCartCounter(cartCounter + 1)
+    console.log(cart)
+  }
 
   const clearCartOfItems = () => {
     setCart([])
