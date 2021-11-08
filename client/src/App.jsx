@@ -29,10 +29,12 @@ function App () {
       id: productId,
       amount: 1
     }
-
+    checkExistingItem(productName)
     setCart([...cart, item])
     setCartCounter(cartCounter + 1)
   }
+
+  const checkExistingItem = productName => {}
 
   const clearCartOfItems = () => {
     setCart([])
