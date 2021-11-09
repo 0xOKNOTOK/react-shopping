@@ -41,9 +41,19 @@ function App () {
   }
 
   const removeItemFromCart = item => {
-    console.log(item)
-    setCart(cart.filter(product => product.id !== item.id))
-    setCartCounter(cartCounter - item.amount)
+    const isCart = cart.find(product => product.id === item.id)
+    if (isCart) {
+      console.log(isCart.id)
+      if (isCart.amount > 1) {
+        cart.map(product =>
+          item.id === product.id ? { ...item, amount: item.amount-- } : item
+        )
+        setCartCounter(cartCounter - 1)
+      } else {
+        setCart(cart.filter(product => product.id !== item.id))
+        setCartCounter(cartCounter - item.amount)
+      }
+    }
   }
 
   const clearCartOfItems = () => {
