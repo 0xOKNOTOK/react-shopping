@@ -8,6 +8,7 @@ const Products = ({ addItemToCart, cartCounter }) => {
   const [products, setProducts] = useState([])
   const [filter, setFilter] = useState(['All'])
   const API_ADDRESS = 'http://localhost:3001/api/products'
+
   useEffect(() => {
     axios.get(API_ADDRESS).then(response => {
       setProducts(response.data)
@@ -25,14 +26,27 @@ const Products = ({ addItemToCart, cartCounter }) => {
 
   const productFilter = e => {
     const newFilterTag = e.target.value.toLowerCase()
-    console.log(newFilterTag)
+
     if (newFilterTag === 'all') {
-      console.log('stink')
       setFilter()
     } else {
       setFilter(newFilterTag)
     }
   }
+
+  const CardElement = (product, index) => (
+    <Card
+      className='card'
+      key={index}
+      addItemToCart={addItemToCart}
+      productName={product.title}
+      productDescription={product.description}
+      productImage={product.filename}
+      productPrice={product.price}
+      productId={product.id}
+      productRating={product.rating}
+    />
+  )
 
   return (
     <div>
@@ -58,32 +72,8 @@ const Products = ({ addItemToCart, cartCounter }) => {
           {filter
             ? products
                 .filter(product => product.type === filter)
-                .map((product, index) => (
-                  <Card
-                    className='card'
-                    key={index}
-                    addItemToCart={addItemToCart}
-                    productName={product.title}
-                    productDescription={product.description}
-                    productImage={product.filename}
-                    productPrice={product.price}
-                    productId={product.id}
-                    productRating={product.rating}
-                  />
-                ))
-            : products.map((product, index) => (
-                <Card
-                  className='card'
-                  key={index}
-                  addItemToCart={addItemToCart}
-                  productName={product.title}
-                  productDescription={product.description}
-                  productImage={product.filename}
-                  productPrice={product.price}
-                  productId={product.id}
-                  productRating={product.rating}
-                />
-              ))}
+                .map((product, index) => CardElement(product, index))
+            : products.map((product, index) => CardElement(product, index))}
           {}
         </section>
       </main>

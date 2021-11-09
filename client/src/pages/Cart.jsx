@@ -13,10 +13,14 @@ const Cart = ({
 }) => {
   const [value, setValue] = useState(0)
 
-  const getPrice = () => {
-    cartContents.forEach(item => {
-      setValue(previousValue => previousValue + item.price)
-    })
+  const getPrice = operator => {
+    return operator
+      ? cartContents.forEach(item => {
+          setValue(previousValue => previousValue + item.price)
+        })
+      : cartContents.forEach(item => {
+          setValue(previousValue => previousValue - item.price)
+        })
   }
 
   const resetCartValue = () => {
@@ -25,7 +29,7 @@ const Cart = ({
 
   useEffect(() => {
     localStorage.setItem('cartContents', JSON.stringify(cartContents))
-    getPrice()
+    getPrice(true)
   }, [cartContents])
 
   return (
@@ -38,7 +42,12 @@ const Cart = ({
         </div>
         <ul className='products_wrapper'>
           {cartContents.map((item, key) => (
-            <CartCard item={item} removeItemFromCart={removeItemFromCart} />
+            <CartCard
+              totalValue={value}
+              getPrice={getPrice}
+              item={item}
+              removeItemFromCart={removeItemFromCart}
+            />
           ))}
         </ul>
         <h1>Your item total is ${value}.</h1>

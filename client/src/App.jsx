@@ -43,7 +43,6 @@ function App () {
   const removeItemFromCart = item => {
     const isCart = cart.find(product => product.id === item.id)
     if (isCart) {
-      console.log(isCart.id)
       if (isCart.amount > 1) {
         cart.map(product =>
           item.id === product.id ? { ...item, amount: item.amount-- } : item
