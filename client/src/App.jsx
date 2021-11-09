@@ -30,23 +30,14 @@ function App () {
       amount: 1
     }
 
-    try {
-      const foundItem = cart.find(product => product.id === productId)
-      const alteredFound = { ...foundItem, amount: foundItem.amount++ }
-
-      setCart(
-        cart.map(product => (product.id === item.id ? alteredFound : item))
-      )
-      setCartCounter(cartCounter + 1)
-    } catch (error) {
-      setCart(cart => [...cart, item])
-    }
+    setCart(cart => [...cart, item])
+    setCartCounter(cartCounter + 1)
 
     console.log(cart)
   }
 
-  const removeItemFromCart = id => {
-    setCart(cart.filter(product => product.id === id))
+  const removeItemFromCart = item => {
+    setCart(cart.filter(product => product.id === item.id))
   }
 
   const clearCartOfItems = () => {

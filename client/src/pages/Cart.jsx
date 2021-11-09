@@ -3,8 +3,15 @@ import Navigation from '../components/Navigation'
 import Button from '../components/Button'
 import '../styles/cart.scss'
 import '../styles/products.scss'
+import CartCard from '../components/CartCard'
 
-const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
+const Cart = ({
+  clearCartOfItems,
+  cartContents,
+  cartCounter,
+  removeItemFromCart
+}) => {
+  const [products, setProducts] = useState([])
   const [value, setValue] = useState(0)
 
   const getPrice = () => {
@@ -12,6 +19,13 @@ const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
       setValue(previousValue => previousValue + item.price)
     })
   }
+
+  useEffect(() => {
+    cartContents.map(item => {
+      setProducts([...products, item])
+      console.log(products)
+    })
+  }, [])
 
   const resetCartValue = () => {
     setValue(0)
@@ -31,13 +45,8 @@ const Cart = ({ clearCartOfItems, cartContents, cartCounter }) => {
           <p>Your current items: </p>
         </div>
         <ul className='products_wrapper'>
-          {cartContents.map(item => (
-            <div className='product_card'>
-              <img src={`assets/${item.image}`} alt=''></img>
-              <h3>{item.name}</h3>
-              <p>{item.info}</p>
-              <h4>{`$${item.price}`}</h4>
-            </div>
+          {cartContents.map((item, key) => (
+            <CartCard item={item} removeItemFromCart={removeItemFromCart} />
           ))}
         </ul>
         <h1>Your item total is ${value}.</h1>
