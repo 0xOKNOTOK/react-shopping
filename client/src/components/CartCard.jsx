@@ -4,8 +4,7 @@ import Button from './Button'
 const CartCard = ({ item, removeItemFromCart }) => {
   const handleRemoveItemButton = e => {
     e.preventDefault()
-    console.log(item)
-    removeItemFromCart(item.id)
+    removeItemFromCart(item)
   }
   return (
     <div className='product_card'>

@@ -11,7 +11,6 @@ const Cart = ({
   cartCounter,
   removeItemFromCart
 }) => {
-  const [products, setProducts] = useState([])
   const [value, setValue] = useState(0)
 
   const getPrice = () => {
@@ -19,13 +18,6 @@ const Cart = ({
       setValue(previousValue => previousValue + item.price)
     })
   }
-
-  useEffect(() => {
-    cartContents.map(item => {
-      setProducts([...products, item])
-      console.log(products)
-    })
-  }, [])
 
   const resetCartValue = () => {
     setValue(0)
