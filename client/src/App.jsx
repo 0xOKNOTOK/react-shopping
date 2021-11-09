@@ -32,15 +32,21 @@ function App () {
 
     try {
       const foundItem = cart.find(product => product.id === productId)
-      const alteredFound = { ...foundItem, amount: foundItem.amount + 1 }
+      const alteredFound = { ...foundItem, amount: foundItem.amount++ }
 
-      setCart(cart.map(product => alteredFound))
+      setCart(
+        cart.map(product => (product.id === item.id ? alteredFound : item))
+      )
       setCartCounter(cartCounter + 1)
     } catch (error) {
       setCart(cart => [...cart, item])
     }
 
     console.log(cart)
+  }
+
+  const removeItemFromCart = id => {
+    setCart(cart.filter(product => product.id === id))
   }
 
   const clearCartOfItems = () => {
@@ -63,6 +69,7 @@ function App () {
               clearCartOfItems={clearCartOfItems}
               cartContents={cart}
               cartCounter={cartCounter}
+              removeItemFromCart={removeItemFromCart}
             />
           </Route>
           <Route path='/'>
