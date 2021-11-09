@@ -13,3 +13,17 @@
     height: 300px;
     margin: 10px;
 }
+
+
+.quant_selector {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+
+.quant_selector button {
+    border: 0;
+}

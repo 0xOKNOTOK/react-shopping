@@ -48,6 +48,7 @@ function App () {
         cart.map(product =>
           item.id === product.id ? { ...item, amount: item.amount-- } : item
         )
+
         setCartCounter(cartCounter - 1)
       } else {
         setCart(cart.filter(product => product.id !== item.id))
