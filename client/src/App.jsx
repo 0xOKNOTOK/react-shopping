@@ -77,6 +77,7 @@ function App () {
               cartContents={cart}
               cartCounter={cartCounter}
               removeItemFromCart={removeItemFromCart}
+              addItemToCart={addItemToCart}
             />
           </Route>
           <Route path='/'>

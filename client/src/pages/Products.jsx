@@ -74,7 +74,6 @@ const Products = ({ addItemToCart, cartCounter }) => {
                 .filter(product => product.type === filter)
                 .map((product, index) => CardElement(product, index))
             : products.map((product, index) => CardElement(product, index))}
-          {}
         </section>
       </main>
     </div>

@@ -9,7 +9,8 @@ const Cart = ({
   clearCartOfItems,
   cartContents,
   cartCounter,
-  removeItemFromCart
+  removeItemFromCart,
+  addItemToCart
 }) => {
   const [value, setValue] = useState(0)
 
@@ -47,6 +48,7 @@ const Cart = ({
               getPrice={getPrice}
               item={item}
               removeItemFromCart={removeItemFromCart}
+              addItemToCart={addItemToCart}
             />
           ))}
         </ul>

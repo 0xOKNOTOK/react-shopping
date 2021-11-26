@@ -2,11 +2,23 @@ import React from 'react'
 import Button from './Button'
 import QuantitySelector from './QuantitySelector'
 
-const CartCard = ({ item, removeItemFromCart, totalValue, getPrice }) => {
+const CartCard = ({
+  item,
+  removeItemFromCart,
+  addItemToCart,
+  totalValue,
+  getPrice
+}) => {
   const handleRemoveItemButton = e => {
     e.preventDefault()
     getPrice(false)
     removeItemFromCart(item)
+  }
+
+  const handleAddItemButton = e => {
+    e.preventDefault()
+    getPrice(true)
+    addItemToCart(item)
   }
 
   console.log(item.amount)
@@ -19,6 +31,7 @@ const CartCard = ({ item, removeItemFromCart, totalValue, getPrice }) => {
       <QuantitySelector
         totalValue={totalValue}
         getPrice={getPrice}
+        handleAddItemButton={handleAddItemButton}
         handleRemoveItemButton={handleRemoveItemButton}
         displayedValue={item.amount}
       />
