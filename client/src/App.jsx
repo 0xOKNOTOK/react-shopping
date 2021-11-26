@@ -30,7 +30,8 @@ function App () {
       amount: 1
     }
 
-    const isCart = cart.find(product => product.id === productId)
+    const isCart = cart.find(product => product.id === item.id)
+    console.log(isCart)
     isCart
       ? cart.map(item =>
           item.id === productId ? { ...item, amount: item.amount++ } : item

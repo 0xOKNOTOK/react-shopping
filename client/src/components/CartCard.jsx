@@ -21,7 +21,6 @@ const CartCard = ({
     addItemToCart(item)
   }
 
-  console.log(item.amount)
   return (
     <div className='product_card'>
       <img src={`assets/${item.image}`} alt=''></img>
