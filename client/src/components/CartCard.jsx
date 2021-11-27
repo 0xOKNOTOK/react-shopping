@@ -12,20 +12,22 @@ const CartCard = ({
   const handleRemoveItemButton = e => {
     e.preventDefault()
     getPrice(false)
+    console.log(item)
     removeItemFromCart(item)
   }
 
   const handleAddItemButton = e => {
     e.preventDefault()
     getPrice(true)
+    console.log(item)
     addItemToCart(item)
   }
 
   return (
     <div className='product_card'>
-      <img src={`assets/${item.image}`} alt=''></img>
-      <h3>{item.name}</h3>
-      <p>{item.info}</p>
+      <img src={`assets/${item.filename}`} alt=''></img>
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
       <h4>{`$${item.price}`}</h4>
       <QuantitySelector
         totalValue={totalValue}
