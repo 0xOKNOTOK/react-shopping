@@ -12,14 +12,13 @@ const CartCard = ({
   const handleRemoveItemButton = e => {
     e.preventDefault()
     getPrice(false)
-    console.log(item)
     removeItemFromCart(item)
   }
 
   const handleAddItemButton = e => {
     e.preventDefault()
     getPrice(true)
-    console.log(item)
+
     addItemToCart(item)
   }
 

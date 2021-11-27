@@ -6,84 +6,87 @@
     "description": "Classic Cherry linear switches, used by gamers.",
     "filename": "product_cherry_mx_reds.jpg",
     "price": 28,
-    "rating": 5
-  }, {
+    "rating": 5,
+    "amount": 0
+  },
+  {
     "id": "8954",
     "title": "Gold Stabilisers",
     "type": "stabilisers",
     "description": "High quality gold stabilisers, unlubed.",
     "filename": "product_gold_stabs.jpg",
     "price": 12,
-    "rating": 4
-  }, {
+    "rating": 4,
+    "amount": 0
+  },
+  {
     "id": "3567",
     "title": "GMMK Pro",
     "type": "keyboards",
-    "description":
-      "Glorious GMMK Pro, a popular barebones keyboard for first time or experienced builders.",
+    "description": "Glorious GMMK Pro, a popular barebones keyboard for first time or experienced builders.",
     "filename": "product_gmmk_pro.jpg",
     "price": 100,
-    "rating": 4
-  }
-  , {
+    "rating": 4,
+    "amount": 0
+  },
+  {
     "id": "2464",
     "title": "Cherry MX Blues",
     "type": "keycaps",
-    "description":
-      "Classic tactile clicky switches, manufactered and tested to last.",
+    "description": "Classic tactile clicky switches, manufactered and tested to last.",
     "filename": "product_cherry_mx_blues.jpg",
     "price": 20,
-    "rating": 5
-  }
-  , {
+    "rating": 5,
+    "amount": 0
+  },
+  {
     "id": "5211",
     "title": "Cyberpnk Pink Deskmat",
     "type": "deskpads",
-    "description":
-      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "description": "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
     "filename": "product_cyberpnk_pink.jpg",
     "price": 30,
-    "rating": 5
-  }
-  , {
+    "rating": 5,
+    "amount": 0
+  },
+  {
     "id": "7546",
     "title": "Cyberpnk Black Deskmat",
     "type": "deskpads",
-    "description":
-      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "description": "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
     "filename": "product_cyberpnk_black.jpg",
     "price": 30,
-    "rating": 5
-  }
-  , {
+    "rating": 5,
+    "amount": 0
+  },
+  {
     "id": "1234",
     "title": "Cyberpnk Yellow Deskmat",
     "type": "deskpads",
-    "description":
-      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "description": "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
     "filename": "product_cyberpnk_yellow.jpg",
     "price": 30,
-    "rating": 5
-  }
-  , {
+    "rating": 5,
+    "amount": 0
+  },
+  {
     "id": "5345",
     "title": "Cyberpnk Red Deskmat",
     "type": "deskpads",
-    "description":
-      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "description": "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
     "filename": "product_cyberpnk_red.jpg",
     "price": 30,
-    "rating": 5
-  }
-  , {
+    "rating": 5,
+    "amount": 0
+  },
+  {
     "id": "8978",
     "title": "Cyberpnk Blue Deskmat",
     "type": "deskpads",
-    "description":
-      "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
+    "description": "Designed by Leendoodles, these colorful deskmats come in 5 amazing colorways!",
     "filename": "product_cyberpnk_blue.jpg",
     "price": 30,
-    "rating": 5
+    "rating": 5,
+    "amount": 0
   }
-  
 ]

@@ -13,22 +13,27 @@ function App () {
   const [cartCounter, setCartCounter] = useState(cartLocalStorage.length)
 
   const addItemToCart = item => {
-    item = {
-      title: item.title,
-      id: item.id,
-      type: item.type,
-      description: item.description,
-      filename: item.filename,
-      price: item.price,
-      rating: item.rating,
-      amount: 1
-    }
     const isCart = cart.find(product => product.id === item.id)
-    isCart
-      ? cart.map(product =>
-          item.id === product.id ? { ...item, amount: item.amount++ } : item
-        )
-      : setCart([...cart, item])
+    if (isCart) {
+      cart.map(product =>
+        item.id === product.id ? { ...item, amount: item.amount++ } : item
+      )
+
+      setCartCounter(cartCounter + 1)
+    } else {
+      const newProduct = {
+        title: item.title,
+        id: item.id,
+        type: item.type,
+        description: item.description,
+        filename: item.filename,
+        price: item.price,
+        rating: item.rating,
+        amount: 1
+      }
+      setCart([...cart, newProduct])
+      setCartCounter(cartCounter + 1)
+    }
   }
 
   const removeItemFromCart = item => {

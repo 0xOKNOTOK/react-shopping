@@ -4,7 +4,7 @@ import Button from './Button'
 const Card = ({ item, addItemToCart }) => {
   const handleAddCartButton = e => {
     e.preventDefault()
-    console.log(item)
+
     addItemToCart(item)
   }
 
