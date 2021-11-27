@@ -39,12 +39,7 @@ const Products = ({ addItemToCart, cartCounter }) => {
       className='card'
       key={index}
       addItemToCart={addItemToCart}
-      productName={product.title}
-      productDescription={product.description}
-      productImage={product.filename}
-      productPrice={product.price}
-      productId={product.id}
-      productRating={product.rating}
+      item={product}
     />
   )
 

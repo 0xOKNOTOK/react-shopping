@@ -12,29 +12,13 @@ function App () {
   const [cart, setCart] = useState(cartLocalStorage)
   const [cartCounter, setCartCounter] = useState(cartLocalStorage.length)
 
-  const addItemToCart = (
-    productName,
-    productPrice,
-    productDescription,
-    productImage,
-    productId,
-    index
-  ) => {
+  const addItemToCart = item => {
     // check if item already exists in cart [if so duplicate.]
-    const item = {
-      name: productName,
-      price: productPrice,
-      info: productDescription,
-      image: productImage,
-      id: productId,
-      amount: 1
-    }
 
     const isCart = cart.find(product => product.id === item.id)
-    console.log(isCart)
     isCart
-      ? cart.map(item =>
-          item.id === productId ? { ...item, amount: item.amount++ } : item
+      ? cart.map(product =>
+          product.id === item.id ? { ...item, amount: item.amount++ } : item
         )
       : setCart([...cart, item])
 

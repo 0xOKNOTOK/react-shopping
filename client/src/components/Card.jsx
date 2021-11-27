@@ -1,33 +1,21 @@
 import React from 'react'
 import Button from './Button'
 
-const Card = ({
-  productName,
-  productPrice,
-  productDescription,
-  productImage,
-  addItemToCart,
-  productId,
-  productRating
-}) => {
+const Card = ({ item, addItemToCart }) => {
   const handleAddCartButton = e => {
     e.preventDefault()
-    addItemToCart(
-      productName,
-      productPrice,
-      productDescription,
-      productImage,
-      productId
-    )
+    addItemToCart(item)
   }
+
+  console.log(item)
 
   return (
     <div className='product_card'>
-      <img src={`assets/${productImage}`} alt=''></img>
-      <h3>{productName}</h3>
-      <p>{productDescription}</p>
-      <h4>{`$${productPrice}`}</h4>
-      {productRating}
+      <img src={`assets/${item.filename}`} alt=''></img>
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
+      <h4>{`$${item.price}`}</h4>
+      {item.rating}
       <Button handleClick={handleAddCartButton} buttonLabel={'Add To Cart'} />
     </div>
   )
