@@ -13,14 +13,16 @@ function App () {
   const [cartCounter, setCartCounter] = useState(cartLocalStorage.length)
 
   const addItemToCart = item => {
+    console.log(item)
     const isCart = cart.find(product => product.id === item.id)
     if (isCart) {
+      console.log('found')
       cart.map(product =>
-        item.id === product.id ? { ...item, amount: item.amount++ } : item
+        product.id === item.id ? { ...item, amount: item.amount++ } : item
       )
-
       setCartCounter(cartCounter + 1)
     } else {
+      console.log('Not found')
       const newProduct = {
         title: item.title,
         id: item.id,
@@ -37,6 +39,7 @@ function App () {
   }
 
   const removeItemFromCart = item => {
+    console.log(item)
     const isCart = cart.find(product => product.id === item.id)
     if (isCart) {
       if (isCart.amount > 1) {
